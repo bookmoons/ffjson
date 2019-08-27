@@ -16,6 +16,7 @@ NAME=ffjson
 TYPE=$1
 
 # Setup
+make
 export GO111MODULE="off"
 go get -u github.com/dvyukov/go-fuzz/go-fuzz github.com/dvyukov/go-fuzz/go-fuzz-build
 go get -d -v -u ./...
@@ -33,5 +34,10 @@ function fuzz {
     clang -fsanitize=fuzzer fuzzer.a -o fuzzer
     ./fuzzit create job --type $TYPE $TARGET fuzzer
 }
+(
+    cd tests/fuzz
+    rm -f target_ffjson.go
+    ffjson target.go
+)
 fuzz "" generate ./generator
 fuzz Unmarshal unmarshal ./tests/fuzz
