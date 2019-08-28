@@ -9,5 +9,9 @@ func FuzzUnmarshal(fuzz []byte) int {
 	if err != nil {
 		return 0
 	}
+	_, err = data.MarshalJSON()
+	if err != nil {
+		return 0
+	}
 	return 1
 }
