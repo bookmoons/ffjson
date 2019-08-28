@@ -15,7 +15,6 @@ jobs:
       go: 1.12.x
       dist: bionic
       script: ./fuzzit.sh local-regression
-
     - stage: Fuzz
       if: branch = master AND type IN (push)
       go: 1.12.x
