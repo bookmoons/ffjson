@@ -11,7 +11,7 @@ import (
 )
 
 // Fuzz tests code generation.
-func Fuzz(fuzz []byte) int {
+func FuzzGenerate(fuzz []byte) int {
 	err := os.MkdirAll("fuzzing", os.ModePerm)
 	if err != nil {
 		panic("could not make fuzzing dir")
