@@ -14,10 +14,7 @@ FUZZIT_VERSION=2.4.46
 GO_FUZZ_VERSION=1810d380ab9c2786af00db592f86d83063216ed0
 
 # Setup
-(
-    cd ../..
-    make
-)
+(cd ../.. && make)
 rm -f target_ffjson.go
 ffjson target.go
 export GO111MODULE=on
