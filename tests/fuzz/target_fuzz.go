@@ -2,6 +2,10 @@
 
 package fuzz
 
+import (
+	_ "github.com/dvyukov/go-fuzz/go-fuzz-dep"
+)
+
 // FuzzUnmarshal tests unmarshaling.
 func FuzzUnmarshal(fuzz []byte) int {
 	data := &Data{}

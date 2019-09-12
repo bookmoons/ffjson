@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 
+	_ "github.com/dvyukov/go-fuzz/go-fuzz-dep"
 	"github.com/pquerna/ffjson/generator"
 )
 
