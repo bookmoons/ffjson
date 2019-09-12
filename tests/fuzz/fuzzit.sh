@@ -19,7 +19,7 @@ GO_FUZZ_VERSION=1810d380ab9c2786af00db592f86d83063216ed0
     make
 )
 rm -f target_ffjson.go
-../../ffjson target.go
+ffjson target.go
 export GO111MODULE=on
 go get -u -v \
     github.com/dvyukov/go-fuzz/go-fuzz@$GO_FUZZ_VERSION \
