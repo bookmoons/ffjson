@@ -25,9 +25,9 @@ jobs:
         - cd tests/fuzz
         - ./fuzzit.sh fuzzing
 
-# go:
-#   - "1.10.x"
-#   - "1.11.x"
+go:
+  - "1.10.x"
+  - "1.11.x"
 
 env:
   GO15VENDOREXPERIMENT=1
