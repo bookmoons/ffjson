@@ -2,7 +2,7 @@
 
 package fuzz
 
-// FuzzUnmarshal tests unmarshaling
+// FuzzUnmarshal tests unmarshaling.
 func FuzzUnmarshal(fuzz []byte) int {
 	data := &Data{}
 	err := data.UnmarshalJSON(fuzz)
